@@ -724,7 +724,7 @@ class FunctionsEdit
         } else {
             // textarea
             if ($fact === 'TEXT' || $fact === 'ADDR' || ($fact === 'NOTE' && !$islink)) {
-                echo '<textarea id="', $element_id, '" name="', $element_name, '" dir="auto">', Filter::escapeHtml($value), '</textarea><br>';
+                echo '<textarea id="', $element_id, '" name="', $element_name, '" dir="auto" class="html-edit" >', Filter::escapeHtml($value), '</textarea><br>';
             } else {
                 // text
                 // If using GEDFact-assistant window

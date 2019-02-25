@@ -26,6 +26,7 @@ use Fisharebest\Webtrees\Controller\SimpleController;
 use Fisharebest\Webtrees\Functions\FunctionsEdit;
 use Fisharebest\Webtrees\Functions\FunctionsPrint;
 use Fisharebest\Webtrees\GedcomCode\GedcomCodePedi;
+use Fisharebest\Webtrees\Module\CkeditorModule;
 
 define('WT_SCRIPT_NAME', 'edit_interface.php');
 require './includes/session.php';
@@ -388,6 +389,11 @@ switch ($action) {
     </form>
     </div>
         <?php
+
+        if (Module::getModuleByName('ckeditor')) {
+            CkeditorModule::enableEditor($controller);
+        }
+
         break;
 
 ////////////////////////////////////////////////////////////////////////////////
