@@ -1089,7 +1089,7 @@ class FunctionsPrintFacts
             }
 
             echo '<td class="optionbox', $styleadd, ' wrap">';
-            echo $text;
+            echo html_entity_decode($text);
 
             if (!empty($noterec)) {
                 echo self::printFactSources($noterec, 1);
