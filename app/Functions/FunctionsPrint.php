@@ -101,6 +101,8 @@ class FunctionsPrint
             $html  = Filter::formatText($text, $WT_TREE);
         }
 
+        $html = Filter::unescapeHtml($html);
+
         if ($textOnly) {
             return strip_tags($text);
         }
