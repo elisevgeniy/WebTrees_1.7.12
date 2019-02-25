@@ -328,6 +328,11 @@ switch ($action) {
     </form>
     </div>
         <?php
+
+        if (Module::getModuleByName('ckeditor')) {
+            CkeditorModule::enableEditor($controller);
+        }
+
         break;
 
 ////////////////////////////////////////////////////////////////////////////////
