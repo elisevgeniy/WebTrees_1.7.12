@@ -1632,6 +1632,10 @@ switch ($action) {
 
         print_indi_form('update', $person, null, $name_fact, '', $person->getSex());
 
+        if (Module::getModuleByName('ckeditor')) {
+            CkeditorModule::enableEditor($controller);
+        }
+
         break;
 
 ////////////////////////////////////////////////////////////////////////////////
