@@ -1354,7 +1354,7 @@ switch ($action) {
             echo '<td class="descriptionbox nowrap">';
             echo I18N::translate('Shared note');
             echo '</td>';
-            echo '<td class="optionbox wrap"><textarea name="NOTE" id="NOTE" rows="15" cols="87"></textarea>';
+            echo '<td class="optionbox wrap"><textarea name="NOTE" id="NOTE" rows="15" cols="87" class="html-edit"></textarea>';
             echo FunctionsPrint::printSpecialCharacterLink('NOTE');
             echo '</td>';
             echo '</tr>';
@@ -1368,6 +1368,11 @@ switch ($action) {
         </form>
     </div>
         <?php
+
+        if (Module::getModuleByName('ckeditor')) {
+            CkeditorModule::enableEditor($controller);
+        }
+
         break;
 
     case 'addnoteaction':
@@ -1447,7 +1452,7 @@ switch ($action) {
                 <tr>
                     <td class="descriptionbox wrap width25"><?php echo I18N::translate('Shared note'); ?></td>
                     <td class="optionbox wrap">
-                        <textarea name="NOTE" id="NOTE" rows="15" cols="90"><?php echo Filter::escapeHtml($note->getNote()); ?></textarea>
+                        <textarea name="NOTE" id="NOTE" rows="15" cols="90" class="html-edit"><?php echo Filter::escapeHtml($note->getNote()); ?></textarea>
                         <br>
                         <?php echo FunctionsPrint::printSpecialCharacterLink('NOTE'); ?>
                     </td>
@@ -1461,6 +1466,11 @@ switch ($action) {
         </form>
     </div>
         <?php
+
+        if (Module::getModuleByName('ckeditor')) {
+            CkeditorModule::enableEditor($controller);
+        }
+
         break;
 
     case 'editnoteaction':
