@@ -83,7 +83,7 @@ class GedcomRecordController extends PageController
         if ($this->record) {
             if ($this->record->canShowName()) {
                 // e.g. "John Doe" or "1881 Census of Wales"
-                $this->setPageTitle($this->record->getFullName());
+                $this->setPageTitle(Filter::unescapeHtml($this->record->getFullName()));
             } else {
                 // e.g. "Individual" or "Source"
                 $record = $this->record;
