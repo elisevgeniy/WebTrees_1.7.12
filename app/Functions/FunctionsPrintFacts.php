@@ -1089,7 +1089,7 @@ class FunctionsPrintFacts
             }
 
             echo '<td class="optionbox', $styleadd, ' wrap">';
-            echo Filter::unescapeHtml($text);
+            echo Filter::removeJs(Filter::unescapeHtml($text));
 
             if (!empty($noterec)) {
                 echo self::printFactSources($noterec, 1);

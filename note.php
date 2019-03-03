@@ -97,7 +97,7 @@ if (Module::getModuleByName('GEDFact_assistant')) {
 ?>
 <div id="note-details">
     <h2>
-        <?php echo Filter::unescapeHtml($controller->record->getFullName()) ?>
+        <?php echo Filter::removeJs(Filter::unescapeHtml($controller->record->getFullName())) ?>
     </h2>
     <div id="note-tabs">
         <ul>
@@ -162,7 +162,7 @@ if (Module::getModuleByName('GEDFact_assistant')) {
                             <?php echo I18N::translate('Shared note'); ?>
                         <?php } ?>
                     </td>
-                    <td class="optionbox wrap width80"><?php echo Filter::unescapeHtml($text); ?></td>
+                    <td class="optionbox wrap width80"><?php echo Filter::removeJs(Filter::unescapeHtml($text)); ?></td>
                 </tr>
                 <?php
                 foreach ($facts as $fact) {

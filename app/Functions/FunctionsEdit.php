@@ -954,7 +954,7 @@ class FunctionsEdit
                 case 'NOTE':
                     $tmp = Note::getInstance($value, $WT_TREE);
                     if ($tmp) {
-                        echo ' ', Filter::unescapeHtml($tmp->getFullName());
+                        echo ' ', Filter::removeJs(Filter::unescapeHtml($tmp->getFullName()));
                     }
                     break;
                 case 'OBJE':

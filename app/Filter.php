@@ -113,6 +113,13 @@ class Filter
         return html_entity_decode(strip_tags($string), ENT_QUOTES, 'UTF-8');
     }
 
+    public static function removeJs($string)
+    {
+        $reg = '#<script[^>]*>.*?</script>#is';
+
+        return preg_replace($reg, '', $string);;
+    }
+
     /**
      * Format block-level text such as notes or transcripts, etc.
      *

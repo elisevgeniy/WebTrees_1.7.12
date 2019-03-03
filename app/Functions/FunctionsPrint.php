@@ -101,7 +101,7 @@ class FunctionsPrint
             $html  = Filter::formatText($text, $WT_TREE);
         }
 
-        $html = Filter::unescapeHtml($html);
+        $html = Filter::removeJs(Filter::unescapeHtml($html));
 
         if ($textOnly) {
             return strip_tags($text);
@@ -126,7 +126,7 @@ class FunctionsPrint
 
             return
                 '<div class="fact_NOTE"><span class="label">' .
-                '<a href="#" onclick="expand_layer(\'' . $element_id . '\'); return false;"><i id="' . $element_id . '_img" class="icon-plus"></i></a> ' . GedcomTag::getLabel($label) . ':</span> ' . '<span id="' . $element_id . '-alt">' . preg_replace('/(<p>)?(.*)(<\/p>)?/m', '$2', Filter::unescapeHtml($first_line)) . '</span>' .
+                '<a href="#" onclick="expand_layer(\'' . $element_id . '\'); return false;"><i id="' . $element_id . '_img" class="icon-plus"></i></a> ' . GedcomTag::getLabel($label) . ':</span> ' . '<span id="' . $element_id . '-alt">' . preg_replace('/(<p>)?(.*)(<\/p>)?/m', '$2', Filter::removeJs(Filter::unescapeHtml($first_line))) . '</span>' .
                 '</div>' .
                 '<div class="note-details" id="' . $element_id . '" style="display:none">' . $html . '</div>';
         }

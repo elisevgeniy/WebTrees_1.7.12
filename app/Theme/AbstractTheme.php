@@ -628,7 +628,7 @@ abstract class AbstractTheme
     protected function headContents(PageController $controller)
     {
         // The title often includes the names of records, which may include HTML markup.
-        $title = Filter::unescapeHtml($controller->getPageTitle());
+        $title = Filter::removeJs(Filter::unescapeHtml($controller->getPageTitle()));
 
         // If an extra (site) title is specified, append it.
         if ($this->tree && $this->tree->getPreference('META_TITLE')) {
