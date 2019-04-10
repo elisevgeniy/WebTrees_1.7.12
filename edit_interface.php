@@ -1346,7 +1346,7 @@ switch ($action) {
         <form method="post" action="edit_interface.php" onsubmit="return check_form(this);">
             <input type="hidden" name="ged" value="<?php echo $WT_TREE->getNameHtml(); ?>">
             <input type="hidden" name="action" value="addnoteaction">
-            <input type="hidden" name="noteid" value="newnote">
+            <input type="hidden" name="noteid" value="newnorgb(159, 213, 235)te">
             <?php echo Filter::getCsrf(); ?>
             <?php
             echo '<table class="facts_table">';
