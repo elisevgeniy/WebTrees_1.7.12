@@ -174,15 +174,15 @@ header form {
 .person_box, .action_header {
     background: #edf7fd;
     border: solid #81a9cb 1px;
-    padding: 8px;
+    padding: 4px;
     margin: 8px;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .person_boxF, .action_headerF {
     background: #e9daf1;
     border: 1px solid #ff2080;
-    padding: 8px;
+    padding: 4px;
     margin: 8px;
     border-radius: 10px;
 }
@@ -190,7 +190,9 @@ header form {
 .person_boxNN {
     background: #fff;
     border: dashed #81a9cb 1px;
-    padding: 3px
+    padding: 4px;
+    margin: 8px;
+    border-radius: 10px;
 }
 
 .person_box:target, .news_box:target, #gedcom_stats:target {
