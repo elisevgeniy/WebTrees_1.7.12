@@ -174,13 +174,17 @@ header form {
 .person_box, .action_header {
     background: #edf7fd;
     border: solid #81a9cb 1px;
-    padding: 3px
+    padding: 8px;
+    margin: 8px;
+    border-radius: 10px;
 }
 
 .person_boxF, .action_headerF {
     background: #e9daf1;
     border: 1px solid #ff2080;
-    padding: 3px
+    padding: 8px;
+    margin: 8px;
+    border-radius: 10px;
 }
 
 .person_boxNN {
