@@ -723,8 +723,10 @@ class FunctionsEdit
             echo ' <a href="#edit_name" onclick="convertHidden(\'', $element_id, '\'); return false;" class="icon-edit_indi" title="' . I18N::translate('Edit the name') . '"></a>';
         } else {
             // textarea
-            if ($fact === 'TEXT' || $fact === 'ADDR' || ($fact === 'NOTE' && !$islink)) {
+            if ($fact === 'TEXT' || ($fact === 'NOTE' && !$islink)) {
                 echo '<textarea id="', $element_id, '" name="', $element_name, '" dir="auto" class="html-edit" >', Filter::escapeHtml($value), '</textarea><br>';
+            } elseif($fact === 'ADDR'){
+                echo '<textarea id="', $element_id, '" name="', $element_name, '" dir="auto">', Filter::escapeHtml($value), '</textarea><br>';
             } else {
                 // text
                 // If using GEDFact-assistant window
