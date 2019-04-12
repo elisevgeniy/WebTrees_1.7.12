@@ -917,10 +917,11 @@ td.descriptionbox a {
 
 .person_box_template img, .person_box_template a.gallery {
     float: left;
-    height: 50px;
+    height: 75px;
     margin: 0 2px 0 0;
-    max-width: 80px;
-    width: auto
+    max-width: 120px;
+    width: auto;
+    border-radius: 8px;
 }
 
 [dir=rtl] .person_box_template img, [dir=rtl] .person_box_template a.gallery {

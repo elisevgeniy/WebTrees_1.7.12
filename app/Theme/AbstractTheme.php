@@ -2011,7 +2011,7 @@ abstract class AbstractTheme
             'chart-spacing-x'                => 5,
             'chart-spacing-y'                => 10,
             'compact-chart-box-x'            => 240,
-            'compact-chart-box-y'            => 50,
+            'compact-chart-box-y'            => 75,
             'distribution-chart-high-values' => '555555',
             'distribution-chart-low-values'  => 'cccccc',
             'distribution-chart-no-values'   => 'ffffff',
