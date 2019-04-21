@@ -910,7 +910,7 @@ class FunctionsPrintFacts
                 $html .= GedcomTag::getLabelValue('DATA:DATE', $date->display());
             }
             foreach ($textSOUR['TEXT'] as $text) {
-                $html .= GedcomTag::getLabelValue('TEXT', Filter::formatText($text, $WT_TREE));
+                $html .= GedcomTag::getLabelValue('TEXT', Filter::removeJs(Filter::unescapeHtml(Filter::formatText($text, $WT_TREE))));
             }
         }
 
